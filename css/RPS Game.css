@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fascinate", cursive;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #e9be82, #c39559);
+}
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 40px;
+}
+*::selection {
+  background-color: red;
+}
+.gameScreen {
+  width: 600px;
+  height: 700px;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+h2 {
+  color: #fff;
+  text-align: center;
+}
+#userScorePlace,
+#pcScorePlace {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+.gamePlace {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h3 {
+  color: #fff;
+  font-size: 25px;
+}
+.gamePlace :is(#userPlace, #pcPlace) {
+  width: 220px;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#userPlace > *,
+#pcPlace > * {
+  width: 100%;
+  height: 33%;
+  object-fit: contain;
+  background-position: 50% 50%;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: 0.6;
+}
+#PC {
+  opacity: 1;
+}
+.rock {
+  background-image: url("../img/rock.png");
+}
+.paper {
+  background-image: url("../img/paper.png");
+}
+.scissors {
+  background-image: url("../img/scissors.png");
+}
+#reset {
+  width: 220px;
+  height: 60px;
+  background-color: #777777;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 45px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+#reset::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 95%;
+  background-color: rgba(255, 255, 255, 0.262);
+  filter: blur(10px);
+  transform: rotate(74deg) translateY(700px);
+  animation: anime linear 4s infinite;
+
+}
+@keyframes anime {
+  to {
+    transform: rotate(74deg) translateY(-800px);
+  }
+}
